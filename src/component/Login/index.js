@@ -53,8 +53,8 @@ export default function Login() {
     const data = new FormData(event.currentTarget);
     const uname = data.get("email");
     // const password = data.get("password");
-    const email = "jonsnow@westeros.com";
-    const password = "G@me0fthr0ne5";
+     const email = data.get("email");
+    const password = data.get("password");
     const creds = { email, password };
     let loginStatus = "";
     let resultant = await getResultant(creds);

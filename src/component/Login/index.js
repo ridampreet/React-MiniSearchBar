@@ -53,13 +53,15 @@ export default function Login() {
     const data = new FormData(event.currentTarget);
     const uname = data.get("email");
     // const password = data.get("password");
-     const email = data.get("email");
+    const email = data.get("email");
     const password = data.get("password");
     const creds = { email, password };
     let loginStatus = "";
     let resultant = await getResultant(creds);
     if (resultant?.status == true) {
       navigate("/profile");
+    } else {
+      alert("pleasse enter correct login details to login");
     }
 
     // var stat = resultant.then(data => {
